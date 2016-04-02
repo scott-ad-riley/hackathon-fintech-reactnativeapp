@@ -9,6 +9,7 @@ import {setTheme, MKColor, MKButton} from 'react-native-material-kit';
 
 let WelcomeScreen = React.createClass({
   render: function () {
+    console.log('rendered welcome with props:', this.props)
   return (
     <View style={styles.windowContainer}>
       <View style={styles.mainContainer}>
@@ -16,7 +17,7 @@ let WelcomeScreen = React.createClass({
         <WelcomeMessage/>
         <WelcomeCopywrite/>
       </View>
-    <FooterButton/>
+    <FooterButton goThrough={this.props.navigator.push} />
   </View>
   )
   }
@@ -73,9 +74,10 @@ let FooterButton = React.createClass({
           padding={10}
           shadowColor="black"
           onPress={() => {
-            console.log('hi, raised button!');
-          }}
-          >
+            this.props.goThrough({
+              message: 'You just tapped through!'
+            });
+          }}>
           <Text pointerEvents="none"
                 style={[styles.baseText, styles.buttonText]}>
             Yeah! Let's do it!
