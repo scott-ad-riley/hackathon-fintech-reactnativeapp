@@ -8,9 +8,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
   },
   baseText: {
-    fontFamily: 'Avenir',
     textAlign: 'center',
-    fontSize: 20,
+    fontSize: 16,
     color: 'white',
   },
   welcomeText: {

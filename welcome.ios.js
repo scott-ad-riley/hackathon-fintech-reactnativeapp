@@ -1,4 +1,4 @@
-import React, {  
+import React, {
   Component,
   Text,
   View,
@@ -8,17 +8,17 @@ import {styles} from './styles.ios.js';
 import {setTheme, MKColor, MKButton} from 'react-native-material-kit';
 
 let WelcomeScreen = React.createClass({
-	render: function () {
-		return (
-				<View>
-				    <View style={styles.mainContainer}>
-			          <WelcomeImage/>
-			          <WelcomeMessage/>
-			        </View>
-			        <FooterButton/>
-				</View>
-			)
-	}
+  render: function () {
+  return (
+    <View>
+      <View style={styles.mainContainer}>
+        <WelcomeImage/>
+        <WelcomeMessage/>
+      </View>
+    <FooterButton/>
+  </View>
+  )
+  }
 });
 
 let WelcomeMessage = React.createClass({
