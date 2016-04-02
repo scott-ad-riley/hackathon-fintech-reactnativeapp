@@ -10,17 +10,19 @@ import {styles} from './styles.ios.js';
 import {setTheme, MKColor, MKButton} from 'react-native-material-kit';
 import {NextButton} from './buttons.ios.js'
 
-
-let Survey1 = React.createClass({
+let Survey4 = React.createClass({
   render: function() {
     return(
       <View style={styles.windowContainer}>
         <View style={styles.textContainer}>
           <Text style={[styles.addMargin, styles.baseText]}>
-            We're going to ask you some questions about your finances
+            How do you feel at the end of each month?
           </Text>
         </View>
-        <NextButton goThrough={this.props.navigator.push} goTo={'surveyQuestion1'}/>
+        <View style={styles.sliderContainer}>
+          <Slider />
+        </View>
+        <NextButton goThrough={this.props.navigator.push} goTo={'surveyQuestion4'}/>
       </View>
     )
   }
@@ -46,7 +48,6 @@ var Slider = React.createClass({
       <View>
         <SliderIOS
           thumbImage={image}
-          // trackImage={require('./slider.png')}
           step={0.5}
           onValueChange={(value) => this.setState({value: value})} />
       </View>
@@ -54,4 +55,4 @@ var Slider = React.createClass({
   }
 });
 
-export {Survey1};
+export {Survey4};
