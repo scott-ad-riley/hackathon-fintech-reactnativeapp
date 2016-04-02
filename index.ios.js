@@ -15,12 +15,15 @@ import React, {
 import {styles} from './styles.ios.js';
 import {WelcomeScreen} from './welcome.ios.js';
 import {FormScreen} from './form.ios.js';
+import {IconList} from './tracker-form.ios.js';
 
 class Main extends Component {
   renderScene(route, nav) {
     switch (route.id) {
       case 'welcome':
         return <WelcomeScreen navigator={nav} />;
+      case 'icons':
+        return <IconList />;
       default:
         return (
           <NavMenu
@@ -86,12 +89,11 @@ class NavMenu extends React.Component {
         <NavButton
           onPress={() => {
             this.props.navigator.push({
-              id: 'other page',
-              message: 'other page',
+              id: 'icons',
               sceneConfig: Navigator.SceneConfigs.FloatFromBottom,
             });
           }}
-          text="Take me to some random page"
+          text="Pick some Trackers"
         />
       </ScrollView>
     );
@@ -105,7 +107,7 @@ class NavButton extends React.Component {
         style={styles.button}
         underlayColor="#B5B5B5"
         onPress={this.props.onPress}>
-        <Text style={styles.buttonText}>{this.props.text}</Text>
+        <Text style={styles.menuText}>{this.props.text}</Text>
       </TouchableHighlight>
     );
   }
