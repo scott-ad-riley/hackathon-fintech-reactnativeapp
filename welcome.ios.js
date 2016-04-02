@@ -14,6 +14,7 @@ let WelcomeScreen = React.createClass({
       <View style={styles.mainContainer}>
         <WelcomeImage/>
         <WelcomeMessage/>
+        <WelcomeCopywrite/>
       </View>
     <FooterButton/>
   </View>
@@ -28,12 +29,22 @@ let WelcomeMessage = React.createClass({
         <Text style={[styles.baseText, styles.welcomeText]}>
           Welcome!
         </Text>
-        <Text>We're here to help. But you need to promise us something:
+      </View>
+    )
+  }
+});
+
+let WelcomeCopywrite = React.createClass({
+  render: function() {
+    return (
+      <View>
+        <Text style={styles.baseText}>
+          Are you ready to save some money?
         </Text>
       </View>
     )
   }
-})
+});
 
 let WelcomeImage = React.createClass({
   render: function() {
@@ -47,7 +58,7 @@ let WelcomeImage = React.createClass({
     </View>
     )
   }
-})
+});
 
 let FooterButton = React.createClass({
   render: function() {
@@ -66,14 +77,14 @@ let FooterButton = React.createClass({
           }}
           >
           <Text pointerEvents="none"
-                style={styles.baseText}>
-            I promise that I'll save money!
+                style={[styles.baseText, styles.buttonText]}>
+            Yeah! Let's do it!
           </Text>
         </MKButton>
       </View>
     )
   }
-})
+});
 
 
 export {WelcomeScreen};

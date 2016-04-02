@@ -20,12 +20,17 @@ const styles = StyleSheet.create({
   },
   baseText: {
     textAlign: 'center',
-    fontSize: 20,
-    color: 'white',
     fontFamily: 'Avenir',
+    fontSize: 20,
+  },
+  buttonText: {
+    color: 'white',
+  },
+  copywriteText: {
+    fontSize: 20,
   },
   welcomeText: {
-    fontSize: 30,
+    fontSize: 40,
     color: 'black',
   },
   icon: {
