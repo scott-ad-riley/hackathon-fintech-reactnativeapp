@@ -10,7 +10,7 @@ import {setTheme, MKColor, MKButton} from 'react-native-material-kit';
 let WelcomeScreen = React.createClass({
   render: function () {
   return (
-    <View>
+    <View style={styles.windowContainer}>
       <View style={styles.mainContainer}>
         <WelcomeImage/>
         <WelcomeMessage/>
@@ -24,12 +24,13 @@ let WelcomeScreen = React.createClass({
 let WelcomeMessage = React.createClass({
   render: function() {
     return (
-      <Text style={styles.baseText}>
-        <Text style={styles.welcomeText}>
+      <View>
+        <Text style={[styles.baseText, styles.welcomeText]}>
           Welcome!
         </Text>
-        <Text>We're here to help. But you need to promise us something</Text>
-      </Text>
+        <Text>We're here to help. But you need to promise us something:
+        </Text>
+      </View>
     )
   }
 })
@@ -37,7 +38,7 @@ let WelcomeMessage = React.createClass({
 let WelcomeImage = React.createClass({
   render: function() {
     return (
-    <View style={styles.iconContainter}>
+    <View style={styles.iconContainer}>
       <Image
         style={styles.icon}
         source={require('./assets/img/smiley.png')}

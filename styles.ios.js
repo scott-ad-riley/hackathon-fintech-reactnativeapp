@@ -4,45 +4,35 @@ import React, {
 
 const styles = StyleSheet.create({
   windowContainer: {
+    flexDirection: 'column',
     flex: 1,
-    backgroundColor: '#F5FCFF',
+  },
+  mainContainer: {
+    alignItems: 'center',
+    flex: 1,
+  },
+  footerContainer: {
+    alignItems: 'center',
+    flex: 0.2,
+  },
+  iconContainer: {
+    alignItems: 'center',
   },
   baseText: {
     textAlign: 'center',
-    fontSize: 16,
+    fontSize: 20,
     color: 'white',
+    fontFamily: 'Avenir',
   },
   welcomeText: {
-    fontFamily: 'Avenir',
-    fontSize: 25,
+    fontSize: 30,
     color: 'black',
-  },
-  iconContainter: {
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   icon: {
     margin: 70,
     justifyContent: 'center',
     height: 300,
     width: 300,
-  },
-  mainContainer: {
-    flex: 0.8,
-  },
-  footerContainer: {
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flex: 0.2,
-  },
-  welcomeButtonText : {
-    fontSize: 16,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
   },
 });
 
