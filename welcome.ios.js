@@ -8,8 +8,8 @@ import {styles} from './styles.ios.js';
 import {setTheme, MKColor, MKButton} from 'react-native-material-kit';
 
 let WelcomeScreen = React.createClass({
-<<<<<<< HEAD
-  render: function() {
+  render: function () {
+    console.log('rendered welcome with props:', this.props)
     return (
       <View style={styles.windowContainer}>
         <View style={styles.mainContainer}>
@@ -17,23 +17,9 @@ let WelcomeScreen = React.createClass({
           <WelcomeMessage/>
           <WelcomeCopywrite/>
         </View>
-      <FooterButton/>
-    </View>
-    )
-=======
-  render: function () {
-    console.log('rendered welcome with props:', this.props)
-  return (
-    <View style={styles.windowContainer}>
-      <View style={styles.mainContainer}>
-        <WelcomeImage/>
-        <WelcomeMessage/>
-        <WelcomeCopywrite/>
+        <FooterButton goThrough={this.props.navigator.push} />
       </View>
-    <FooterButton goThrough={this.props.navigator.push} />
-  </View>
-  )
->>>>>>> 492a8e4504b4fe0b61d1a5f8f329d0abcf901d0f
+    )
   }
 });
 
