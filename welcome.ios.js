@@ -8,6 +8,7 @@ import {styles} from './styles.ios.js';
 import {setTheme, MKColor, MKButton} from 'react-native-material-kit';
 
 let WelcomeScreen = React.createClass({
+<<<<<<< HEAD
   render: function() {
     return (
       <View style={styles.windowContainer}>
@@ -19,6 +20,20 @@ let WelcomeScreen = React.createClass({
       <FooterButton/>
     </View>
     )
+=======
+  render: function () {
+    console.log('rendered welcome with props:', this.props)
+  return (
+    <View style={styles.windowContainer}>
+      <View style={styles.mainContainer}>
+        <WelcomeImage/>
+        <WelcomeMessage/>
+        <WelcomeCopywrite/>
+      </View>
+    <FooterButton goThrough={this.props.navigator.push} />
+  </View>
+  )
+>>>>>>> 492a8e4504b4fe0b61d1a5f8f329d0abcf901d0f
   }
 });
 
@@ -73,9 +88,10 @@ let FooterButton = React.createClass({
           padding={10}
           shadowColor="black"
           onPress={() => {
-            console.log('hi, raised button!');
-          }}
-          >
+            this.props.goThrough({
+              message: 'You just tapped through!'
+            });
+          }}>
           <Text pointerEvents="none"
                 style={[styles.baseText, styles.buttonText]}>
             Yeah! Let's do it!
