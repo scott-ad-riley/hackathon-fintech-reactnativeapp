@@ -11,12 +11,13 @@ import React, {
 } from 'react-native';
 import {styles} from './styles.ios.js';
 import {WelcomeScreen} from './welcome.ios.js';
+import {FormScreen} from './form.ios.js';
 
 class Main extends Component {
   render() {
     return (
       <View style={styles.windowContainer}>
-        <WelcomeScreen />
+        <FormScreen />
       </View>
     );
   }

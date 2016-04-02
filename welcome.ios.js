@@ -6,20 +6,19 @@ import React, {
 } from 'react-native';
 import {styles} from './styles.ios.js';
 import {setTheme, MKColor, MKButton} from 'react-native-material-kit';
-var Animatable = require('react-native-animatable');
 
 let WelcomeScreen = React.createClass({
-  render: function () {
-  return (
-    <View style={styles.windowContainer}>
-      <View style={styles.mainContainer}>
-        <WelcomeImage/>
-        <WelcomeMessage/>
-        <WelcomeCopywrite/>
-      </View>
-    <FooterButton/>
-  </View>
-  )
+  render: function() {
+    return (
+      <View style={styles.windowContainer}>
+        <View style={styles.mainContainer}>
+          <WelcomeImage/>
+          <WelcomeMessage/>
+          <WelcomeCopywrite/>
+        </View>
+      <FooterButton/>
+    </View>
+    )
   }
 });
 

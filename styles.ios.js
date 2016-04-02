@@ -40,6 +40,19 @@ const styles = StyleSheet.create({
     height: 300,
     width: 300,
   },
+  textfieldWithFloatingLabel: {
+    height: 70,  // have to do it on iOS
+    marginTop: 30,
+  },
+  row: {
+    flexDirection: 'row',
+  },
+  col: {
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginLeft: 7, marginRight: 7,
+  },
 });
 
 export {styles};
