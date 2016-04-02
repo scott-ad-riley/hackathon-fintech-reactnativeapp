@@ -15,6 +15,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flex: 0.2,
   },
+  textContainer: {
+    marginTop: 30,
+    alignItems: 'center',
+    flex: 0.2,
+  },
   iconContainer: {
     alignItems: 'center',
   },
