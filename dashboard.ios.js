@@ -33,7 +33,7 @@ let LeaderboardCard = React.createClass({
               <Text>Some text to go in the body.</Text>
           </Card.Body>
           <Card.Actions position="right">
-              <Button value="ACTION" />
+              <Button value="LEADERBOARD" />
           </Card.Actions>
         </Card>
       </View>
@@ -45,7 +45,7 @@ let StatusCard = React.createClass({
   render: function() {
     return(
       <View>
-        <Card style={styles.cardMargin}>
+        <Card>
           <Card.Media
             image={<Image source={require('./assets/img/status.jpeg')} />}
             overlay
@@ -54,7 +54,7 @@ let StatusCard = React.createClass({
               <Text>Well done, Jonathan! This week you've saved</Text>
           </Card.Body>
           <Card.Actions position="right">
-              <Button value="ACTION" />
+              <Button value="THIS WEEK" />
           </Card.Actions>
         </Card>
       </View>
