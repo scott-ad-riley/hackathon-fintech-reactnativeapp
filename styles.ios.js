@@ -58,6 +58,17 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginLeft: 7, marginRight: 7,
   },
+  menuText: {
+    fontWeight: '900',
+  },
+  trackerContainer: {
+    flexDirection: 'row',
+  },
+  trackerIcon: {
+    flex : 1,
+    width: 120,
+    height: 120,
+  },
 });
 
 export {styles};

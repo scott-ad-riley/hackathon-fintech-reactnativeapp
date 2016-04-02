@@ -121,7 +121,7 @@ class NavButton extends React.Component {
         style={styles.button}
         underlayColor="#B5B5B5"
         onPress={this.props.onPress}>
-        <Text style={styles.buttonText}>{this.props.text}</Text>
+        <Text style={styles.menuText}>{this.props.text}</Text>
       </TouchableHighlight>
     );
   }
