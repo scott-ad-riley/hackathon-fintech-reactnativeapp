@@ -21,6 +21,7 @@ import {Survey2} from './survey2.ios.js'
 import {Survey3} from './survey3.ios.js'
 import {Survey4} from './survey4.ios.js'
 import {Survey5} from './survey5.ios.js'
+import {Dashboard} from './dashboard.ios.js';
 
 
 class Main extends Component {
@@ -28,6 +29,8 @@ class Main extends Component {
     switch (route.id) {
       case 'welcome':
         return <WelcomeScreen navigator={nav} />;
+      case 'dashboard':
+        return <Dashboard navigator={nav} />;
       case 'surveyStart':
         return <Survey1 navigator={nav} />;
       case 'survey1':
@@ -119,6 +122,15 @@ class NavMenu extends React.Component {
             });
           }}
           text="The first survey question"
+        />
+        <NavButton
+          onPress={() => {
+            this.props.navigator.push({
+              id: 'dashboard',
+              sceneConfig: Navigator.SceneConfigs.FloatFromBottom,
+            });
+          }}
+          text="Take me to the dashboard"
         />
       </ScrollView>
     );
