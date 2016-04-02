@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   buttonText: {
+    fontWeight: '900',
     color: 'white',
   },
   copywriteText: {
