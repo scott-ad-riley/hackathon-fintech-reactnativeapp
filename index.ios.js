@@ -21,9 +21,9 @@ class saveGen extends Component {
         <View style={styles.mainContainer}>
           <Image
              style={styles.icon}
-             source={require('./assets/img/hello.png')}
+             source={require('./assets/img/smiley.png')}
            />
-           <Image
+           <Image/>
         </View>
         <View style={styles.footerContainer}>
           <Button style={styles.welcomeButtonContainer} textStyle={[styles.welcomeButtonText]}>
@@ -43,8 +43,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
   },
   icon: {
-    height: 100,
-    width: 100,
+    height: 300,
+    width: 300,
   },
   mainContainer: {
     flex: 0.8,
