@@ -46,6 +46,9 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Lato.ttf</string>
+		<string>Lato-Regular.ttf</string>
+		<string>Lato-Heavy.ttf</string>
+		<string>Lato-Light.ttf</string>
 	</array>
 </dict>
 </plist>

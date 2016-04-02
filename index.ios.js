@@ -86,12 +86,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
   },
   baseText: {
+    fontFamily: 'Avenir',
     textAlign: 'center',
-    fontSize: 16,
+    fontSize: 20,
     color: 'white',
   },
   welcomeText: {
-    fontFamily: 'Roboto',
+    fontFamily: 'Avenir',
     fontSize: 25,
     color: 'black',
   },
