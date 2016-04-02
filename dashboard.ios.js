@@ -13,7 +13,8 @@ let Dashboard = React.createClass({
     console.log('rendered welcome with props:', this.props)
     return (
       <View>
-        <LeaderboardCard/>
+        <LeaderboardCard />
+        <StatusCard />
       </View>
     )
   }
@@ -23,13 +24,34 @@ let LeaderboardCard = React.createClass({
   render: function() {
     return(
       <View>
-        <Card>
+        <Card style={styles.cardMargin}>
           <Card.Media
             image={<Image source={require('./assets/img/leaderboard.jpeg')} />}
             overlay
           />
           <Card.Body>
               <Text>Some text to go in the body.</Text>
+          </Card.Body>
+          <Card.Actions position="right">
+              <Button value="ACTION" />
+          </Card.Actions>
+        </Card>
+      </View>
+    )
+  }
+})
+
+let StatusCard = React.createClass({
+  render: function() {
+    return(
+      <View>
+        <Card style={styles.cardMargin}>
+          <Card.Media
+            image={<Image source={require('./assets/img/status.jpeg')} />}
+            overlay
+          />
+          <Card.Body>
+              <Text>Well done, Jonathan! This week you've saved</Text>
           </Card.Body>
           <Card.Actions position="right">
               <Button value="ACTION" />

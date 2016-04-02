@@ -11,6 +11,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flex: 1,
   },
+  cardMargin: {
+    marginTop: 30,
+  },
   footerContainer: {
     alignItems: 'center',
     flex: 0.2,
