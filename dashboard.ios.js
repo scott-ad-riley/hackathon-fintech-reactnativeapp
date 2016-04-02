@@ -6,20 +6,14 @@ import React, {
 } from 'react-native';
 import {styles} from './styles.ios.js';
 import {setTheme, MKColor, MKButton} from 'react-native-material-kit';
-
-const MK = require('react-native-material-kit');
-const {
-  MKCardStyles
-} = MK;
+import { Card, Button } from 'react-native-material-design';
 
 let Dashboard = React.createClass({
   render: function () {
     console.log('rendered welcome with props:', this.props)
     return (
       <View>
-        <Text style={styles.baseText}>
-          Hello
-        </Text>
+        <LeaderboardCard/>
       </View>
     )
   }
@@ -31,7 +25,7 @@ let LeaderboardCard = React.createClass({
       <View>
         <Card>
           <Card.Media
-            image={<Image source={require('./../img/welcome.jpg')} />}
+            image={<Image source={require('./assets/img/leaderboard.jpeg')} />}
             overlay
           />
           <Card.Body>
