@@ -22,15 +22,11 @@ import {Survey3} from './survey3.ios.js'
 import {Survey4} from './survey4.ios.js'
 import {Survey5} from './survey5.ios.js'
 import {Dashboard} from './dashboard.ios.js';
-import {Leaderboard} from './leaderboard.ios.js';
-import {SocialMedia} from './socialmedia.ios.js';
 
 
 class Main extends Component {
   renderScene(route, nav) {
     switch (route.id) {
-      case 'socialsignin':
-        return <SocialMedia navigator={nav} />;
       case 'welcome':
         return <WelcomeScreen navigator={nav} />;
       case 'dashboard':
@@ -61,7 +57,7 @@ class Main extends Component {
       <Navigator
         ref={this._setNavigatorRef}
         style={styles.container}
-        initialRoute={{ id: 'socialsignin', }}
+        initialRoute={{ id: 'welcome', }}
         renderScene={this.renderScene}
         configureScene={(route) => {
           if (route.sceneConfig) {
